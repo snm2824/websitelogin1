@@ -1,0 +1,57 @@
+
+   <!DOCTYPE html>
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="utf-8">
+        <title>Firebase Login</title>
+            <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+            <link rel="stylesheet" href="stylelogin.css">
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+
+        <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+      
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>       
+
+    
+            
+          </head>
+          <body>
+          
+        
+            
+              <div id="page" class="loggedin-div">
+            <h1>Anknote</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+               sed do eiusmod tempore.
+   
+              </p>
+            </div>
+          
+            <div id="logout" class="loggedout-div">
+              <h3>Welcome User</h3>
+          
+              <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+              
+              <button id="btn_logout">Logout</button>
+            </div>
+            <script>
+              firebase.auth().onAuthStateChanged(function(user) {
+               if (!user) {
+                     window.location.href="login.html";
+               }
+             });
+              </script>
+           
+            
+           
+  <script src="login.js"></script>  
+    
+</body>
+    </html>
+    
+
+    
